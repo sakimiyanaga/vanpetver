@@ -1,3 +1,9 @@
+html {
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
+}
+
 body {
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -5,6 +11,16 @@ body {
 	padding-top: 50px;
 }
 
+#test {
+	height: 1000px;
+	border: 1px solid red;
+}
+
+*{
+	list-style: none;
+	text-decoration: none;
+	box-sizing: border-box;
+}
 a {
 	font-weight: normal;
 	text-decoration: none;
@@ -33,8 +49,15 @@ footer {
 .navbar {
 	background-color: rgba(255,255,255,1);
 	padding-right: 15px;
+  	border-radius: 4px;
+  	border: 1px solid #ccc;
+  	border: 1px solid rgba(0, 0, 0, .15);
+    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
 }
-.navbar-nav li > a:hover {
+.navbar-nav li > a:hover, 
+.navbar-nav li > a:focus,
+.navbar-nav li > a:active{
 	background-color: transparent;
 }
 #zoom-fade {
@@ -59,13 +82,134 @@ footer {
   text-shadow: 0 0 0px black;
 }
 /* end */
-.intro-text a {
-	color: #919191;
-	transition: 0.5s;
+
+
+/* Vertical Carousel Text Post*/
+
+.col-md-9 > .container {
+	margin: 0;
+	display: block;
 }
-.intro-text a:hover{
-	color: black;
+.ticker-headline {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding: 15px 0;
+  margin: 0;
 }
+.carousel.vertical .carousel-inner {
+  height: 100%;
+  width: 100%;
+}
+.carousel.vertical .carousel-inner > .item {
+  width: 100%;
+  -webkit-transition: 0.6s ease-in-out top;
+  transition: 0.6s ease-in-out top;
+}
+@media all and (transform-3d), (-webkit-transform-3d) {
+  .carousel.vertical .carousel-inner > .item {
+    -webkit-transition: 0.6s ease-in-out;
+    transition: 0.6s ease-in-out;
+  }
+  .carousel.vertical .carousel-inner > .item.next, .carousel.vertical .carousel-inner > .item.active.right {
+    -webkit-transform: translate3d(0, 100%, 0);
+            transform: translate3d(0, 100%, 0);
+    top: 0;
+  }
+  .carousel.vertical .carousel-inner > .item.prev, .carousel.vertical .carousel-inner > .item.active.left {
+    -webkit-transform: translate3d(0, -100%, 0);
+            transform: translate3d(0, -100%, 0);
+    top: 0;
+  }
+  .carousel.vertical .carousel-inner > .item.next.left, .carousel.vertical .carousel-inner > .item.prev.right, .carousel.vertical .carousel-inner > .item.active {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+    top: 0;
+  }
+}
+.carousel.vertical .carousel-inner > .active,
+.carousel.vertical .carousel-inner > .next,
+.carousel.vertical .carousel-inner > .prev {
+  display: block;
+}
+.carousel.vertical .carousel-inner > .active {
+  top: 0;
+}
+.carousel.vertical .carousel-inner > .next,
+.carousel.vertical .carousel-inner > .prev {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.carousel.vertical .carousel-inner > .next {
+  top: 100%;
+}
+.carousel.vertical .carousel-inner > .prev {
+  top: -100%;
+}
+.carousel.vertical .carousel-inner > .next.left,
+.carousel.vertical .carousel-inner > .prev.right {
+  top: 0;
+}
+.carousel.vertical .carousel-inner > .active.left {
+  top: -100%;
+}
+.carousel.vertical .carousel-inner > .active.right {
+  top: 100%;
+}
+
+.carousel.vertical .carousel-control {
+  left: auto;
+  width: 50px;
+}
+.carousel.vertical .carousel-control.up {
+  top: 0;
+  right: 0;
+  bottom: 50%;
+}
+.carousel.vertical .carousel-control.down {
+  top: 50%;
+  right: 0;
+  bottom: 0;
+}
+.carousel.vertical .carousel-control .icon-prev,
+.carousel.vertical .carousel-control .icon-next,
+.carousel.vertical .carousel-control .glyphicon-chevron-up,
+.carousel.vertical .carousel-control .glyphicon-chevron-down {
+  position: absolute;
+  top: 50%;
+  z-index: 5;
+  display: inline-block;
+}
+.carousel.vertical .carousel-control .icon-prev,
+.carousel.vertical .carousel-control .glyphicon-chevron-up {
+  left: 50%;
+  margin-left: -10px;
+  top: 50%;
+  margin-top: -10px;
+}
+.carousel.vertical .carousel-control .icon-next,
+.carousel.vertical .carousel-control .glyphicon-chevron-down {
+  left: 50%;
+  margin-left: -10px;
+  top: 50%;
+  margin-top: -10px;
+}
+.carousel.vertical .carousel-control .icon-up,
+.carousel.vertical .carousel-control .icon-down {
+  width: 20px;
+  height: 20px;
+  line-height: 1;
+  font-family: serif;
+}
+.carousel.vertical .carousel-control .icon-prev:before {
+  content: '\2039';
+}
+.carousel.vertical .carousel-control .icon-next:before {
+  content: '\203a';
+}
+
+/* the end */
 .navbar-toggle {
   position: relative;
   float: right;
@@ -82,54 +226,7 @@ footer {
 .icon-bar {
 	background-color: black;
 }
-header {
-    text-align: left;
-    background-attachment: scroll;
-    background-image: url("../img/maomaoandme.jpg");
-    background-position: center center;
-    background-repeat: none;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
- }
 
-.intro-text {
-	height: 100%;
-	width: 35%;
-	margin-left: 10%;
-	margin-right: 10%;
-	margin-top: 10%;
-	margin-bottom: 10%;
-	border: black 1px solid;
-	padding: 20px;
-	background-color: rgba(255,255,255,0.5);
-}
-
-@media only screen and (max-width: 768px){
-.intro-text {
-	width: 80%;
-}
-}
-.intro-text a {
-	text-decoration: none;
-	font-weight: normal;
-}
-#trueresume {
-	color: transparent;
-}
-#trueresume:hover {
-	color: white;
-}
-
-.portfolio-item img {
-	border-radius: 10px;
-}
-
-.portfolio-item p {
-	font-style: italic;
-	color: #919191;
-}
 
 form {
 	margin-bottom: 20px;
@@ -158,65 +255,9 @@ form {
 	margin-right: auto;
 }
 }
-.section-heading {
-	margin-top: 40px;
-	margin-bottom: 40px;
-	color: #919191;
-}
 
-.portfolio-item {
-	overflow: hidden;
-	position: relative;
-	box-sizing: border-box;
-	display: inline-block;
-}
-
-.portfolio-content {
-	height: 50%;
-	width: 100%;
-  	background-color: rgba(255,255,255,0.5);
-  	position: absolute;
-  	padding: 10px;
-  	top: 100%;
-  	transition: all 0.5s ease;
-}
-
-.portfolio-item:hover .portfolio-content {
-  background-color: rgba(255,255,255,0.8);
-  top: 50%;
-}
-
-.portfolio-content a {
-	text-decoration: none;
-	color: black;
-	font-weight: normal;
-	letter-spacing: normal;
-}
-
-@media only screen and (max-width: 992px){
-	.portfolio-content {
-		width: 100%;
-	}
-}
-@media only screen and (max-width: 768px) {
-	.portfolio-item {
-		margin: 10px;
-		text-align: left;
-	}
-	.portfolio-item img{
-		width: 70%;
-		float: left;
-	}
-	.portfolio-content {
-		width: 30%;
-		height: 100%;
-		position: center;
-		float: right;
-		position: relative;
-	}
-	.portfolio-content button, 
-	.portfolio-content p{
-		display: none;
-	}
+.dropdown-menu {
+	position: absolute;
+	margin-bottom: 0;
 }
 
