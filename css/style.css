@@ -85,10 +85,8 @@ footer {
 
 
 /* Vertical Carousel Text Post*/
-
-.col-md-9 > .container {
-	margin: 0;
-	display: block;
+.slide {
+	max-width: 80%;
 }
 .ticker-headline {
   overflow: hidden;
@@ -96,10 +94,10 @@ footer {
   white-space: nowrap;
   padding: 15px 0;
   margin: 0;
+  box-sizing: border-box;
 }
 .carousel.vertical .carousel-inner {
   height: 100%;
-  width: 100%;
 }
 .carousel.vertical .carousel-inner > .item {
   width: 100%;
@@ -138,7 +136,6 @@ footer {
 .carousel.vertical .carousel-inner > .next,
 .carousel.vertical .carousel-inner > .prev {
   position: absolute;
-  top: 0;
   width: 100%;
 }
 .carousel.vertical .carousel-inner > .next {
@@ -187,6 +184,7 @@ footer {
   margin-left: -10px;
   top: 50%;
   margin-top: -10px;
+  padding: 0;
 }
 .carousel.vertical .carousel-control .icon-next,
 .carousel.vertical .carousel-control .glyphicon-chevron-down {
@@ -194,21 +192,14 @@ footer {
   margin-left: -10px;
   top: 50%;
   margin-top: -10px;
+  padding: 0;
 }
 .carousel.vertical .carousel-control .icon-up,
 .carousel.vertical .carousel-control .icon-down {
   width: 20px;
   height: 20px;
   line-height: 1;
-  font-family: serif;
 }
-.carousel.vertical .carousel-control .icon-prev:before {
-  content: '\2039';
-}
-.carousel.vertical .carousel-control .icon-next:before {
-  content: '\203a';
-}
-
 /* the end */
 .navbar-toggle {
   position: relative;
