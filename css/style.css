@@ -1,0 +1,222 @@
+body {
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: fixed;
+	padding-top: 50px;
+}
+
+a {
+	font-weight: normal;
+	text-decoration: none;
+	letter-spacing: 1px;
+}
+
+h1 {
+	font-family: 'Oleo Script',"Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-size: 42px;
+}
+
+footer {
+	background-color: white;
+	color: grey;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	font-weight: 100;
+	font-size: 12px;
+}
+
+.glyphicon {
+	padding: 10px;
+}
+
+/* navbar styles*/
+.navbar {
+	background-color: rgba(255,255,255,1);
+	padding-right: 15px;
+}
+.navbar-nav li > a:hover {
+	background-color: transparent;
+}
+#zoom-fade {
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -ms-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  -webkit-text-shadow: 0 0 50px transparent;
+  -moz-text-shadow: 0 0 50px transparent;
+  -ms-text-shadow: 0 0 50px transparent;
+  -o-text-shadow: 0 0 50px transparent;
+  text-shadow: 0 0 50px transparent;
+  color: rgba(0, 0, 0, 0.5);
+  overflow: visible;
+}
+#zoom-fade:hover {
+  -webkit-text-shadow: 0 0 0px black;
+  -moz-text-shadow: 0 0 0px black;
+  -ms-text-shadow: 0 0 0px black;
+  -o-text-shadow: 0 0 0px black;
+  text-shadow: 0 0 0px black;
+}
+/* end */
+.intro-text a {
+	color: #919191;
+	transition: 0.5s;
+}
+.intro-text a:hover{
+	color: black;
+}
+.navbar-toggle {
+  position: relative;
+  float: right;
+  padding: 9px 10px;
+  margin-top: 8px;
+  margin-right: 15px;
+  margin-bottom: 8px;
+  background-color: rgba(255,255,255,0.6);
+  background-image: none;
+  border: 2px solid black;
+  border-radius: 5;
+}
+
+.icon-bar {
+	background-color: black;
+}
+header {
+    text-align: left;
+    background-attachment: scroll;
+    background-image: url("../img/maomaoandme.jpg");
+    background-position: center center;
+    background-repeat: none;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+ }
+
+.intro-text {
+	height: 100%;
+	width: 35%;
+	margin-left: 10%;
+	margin-right: 10%;
+	margin-top: 10%;
+	margin-bottom: 10%;
+	border: black 1px solid;
+	padding: 20px;
+	background-color: rgba(255,255,255,0.5);
+}
+
+@media only screen and (max-width: 768px){
+.intro-text {
+	width: 80%;
+}
+}
+.intro-text a {
+	text-decoration: none;
+	font-weight: normal;
+}
+#trueresume {
+	color: transparent;
+}
+#trueresume:hover {
+	color: white;
+}
+
+.portfolio-item img {
+	border-radius: 10px;
+}
+
+.portfolio-item p {
+	font-style: italic;
+	color: #919191;
+}
+
+form {
+	margin-bottom: 20px;
+}
+
+.form-group textarea,
+.form-group input {
+	border-radius: 0;
+}
+.btn,
+.btn-x1 {
+	background-color: white;
+	color: black;
+	font-size: 15px;
+	transition: 0.5s;
+	border-radius: 2;
+	border: black 1px solid
+}
+.btn:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+@media only screen and (max-width: 768px){
+.form-group{
+	max-width: 80%;
+	margin-left: 10%;
+	margin-right: auto;
+}
+}
+.section-heading {
+	margin-top: 40px;
+	margin-bottom: 40px;
+	color: #919191;
+}
+
+.portfolio-item {
+	overflow: hidden;
+	position: relative;
+	box-sizing: border-box;
+	display: inline-block;
+}
+
+.portfolio-content {
+	height: 50%;
+	width: 100%;
+  	background-color: rgba(255,255,255,0.5);
+  	position: absolute;
+  	padding: 10px;
+  	top: 100%;
+  	transition: all 0.5s ease;
+}
+
+.portfolio-item:hover .portfolio-content {
+  background-color: rgba(255,255,255,0.8);
+  top: 50%;
+}
+
+.portfolio-content a {
+	text-decoration: none;
+	color: black;
+	font-weight: normal;
+	letter-spacing: normal;
+}
+
+@media only screen and (max-width: 992px){
+	.portfolio-content {
+		width: 100%;
+	}
+}
+@media only screen and (max-width: 768px) {
+	.portfolio-item {
+		margin: 10px;
+		text-align: left;
+	}
+	.portfolio-item img{
+		width: 70%;
+		float: left;
+	}
+	.portfolio-content {
+		width: 30%;
+		height: 100%;
+		position: center;
+		float: right;
+		position: relative;
+	}
+	.portfolio-content button, 
+	.portfolio-content p{
+		display: none;
+	}
+}
+
