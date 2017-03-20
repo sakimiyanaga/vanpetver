@@ -85,8 +85,8 @@ footer {
 
 
 /* Vertical Carousel Text Post*/
-.slide {
-	max-width: 80%;
+.col-md-9 .container {
+	max-width: 100%;
 }
 .ticker-headline {
   overflow: hidden;
